@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cimbra Nieto</title>
+
+<style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#e9ecef;
+display:flex;
+justify-content:center;
+padding:25px;
+}
+
+/* =========================
+   TARJETA PRINCIPAL
+========================= */
+
+.card{
+width:100%;
+max-width:430px;
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+/* =========================
+   PORTADA
+========================= */
+
+.cover{
+height:140px;
+background:black;
+}
+
+/* =========================
+   FOTO DE PERFIL
+========================= */
+
+.profile{
+display:flex;
+justify-content:center;
+margin-top:-55px;
+}
+
+.profile img{
+width:250px;
+height:250px;
+border-radius:50%;
+border:10px solid white;
+object-fit:cover;
+background:#ddd;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.content{
+padding:10px;
+text-align:center;
+}
+
+h1{
+font-size:30px;
+margin-top:1px;
+line-height:1.2;
+}
+
+.subtitle{
+color:#666;
+font-size:15px;
+margin-top:8px;
+line-height:1.5;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.buttons{
+margin-top:22px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.btn{
+text-decoration:none;
+padding:15px;
+border-radius:54px;
+font-weight:bold;
+font-size:20px;
+display:block;
+text-align:center;
+transition:transform .2s,opacity .2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+opacity:.9;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.dark{
+background:#111;
+color:white;
+}
+
+.light{
+background:#f1f1f1;
+color:#111;
+}
+
+/* =========================
+   PORTAFOLIO
+========================= */
+
+.portfolio{
+margin-top:35px;
+text-align:left;
+}
+
+.portfolio-title{
+text-align:center;
+font-size:20px;
+letter-spacing:1px;
+margin-bottom:18px;
+
+background:#e9ecef; 
+padding:12px 10px; 
+border-radius:8px;
+}
+
+.portfolio-subtitle{
+text-align:center;
+font-size:15px;
+color:#777;
+margin-bottom:20px;
+line-height:1.5;
+}
+
+/* GRID DE PROYECTOS */
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+/* TARJETA DE PROYECTO */
+
+.project{
+position:relative;
+display:block;
+height:170px;
+border-radius:18px;
+overflow:hidden;
+text-decoration:none;
+background:#ddd;
+box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+/* IMAGEN DEL PROYECTO */
+
+.project img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:transform .4s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.project:hover img{
+transform:scale(1.06);
+}
+
+/* DEGRADADO */
+
+.project::after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+height:60%;
+background:linear-gradient(
+transparent,
+rgba(0,0,0,.85)
+);
+}
+
+/* TEXTO DEL PROYECTO */
+
+.project-info{
+position:absolute;
+bottom:14px;
+left:14px;
+right:10px;
+z-index:2;
+color:white;
+}
+
+.project-name{
+font-size:15px;
+font-weight:bold;
+}
+
+.project-type{
+font-size:11px;
+margin-top:4px;
+opacity:.85;
+}
+
+/* =========================
+   LLAMADA A LA ACCIÓN
+========================= */
+
+.cta{
+margin-top:25px;
+padding:20px;
+background:#333333;
+color:white;
+border-radius:30px;
+text-align:center;
+}
+
+.cta h2{
+font-size:20px;
+margin-bottom:8px;
+}
+
+.cta p{
+font-size:13px;
+color:#ccc;
+line-height:1.5;
+}
+
+.cta .btn{
+margin-top:15px;
+background:#25D366;
+color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+padding:22px 18px;
+font-size:12px;
+color:#888;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<!-- =========================
+     PORTADA
+========================= -->
+
+<div class="cover"></div>
+
+<!-- =========================
+     FOTO DE PERFIL
+========================= -->
+
+<div class="profile">
+
+<img src="foto.jpg">
+
+</div>
+
+<!-- =========================
+     CONTENIDO PRINCIPAL
+========================= -->
+
+<div class="content">
+
+<h1>
+CIMBRA NIETO
+</h1>
+
+<p class="subtitle">
+
+Andamios-Puntales-Duelas-Escaleras-Hamacas<br>
+
+<br>
+
+
+
+</p>
+
+
+<!-- =========================
+     PORTAFOLIO
+========================= -->
+
+<div class="portfolio">
+
+<h2 class="portfolio-title">
+PROYECTOS & SERVICIOS
+</h2>
+
+<p class="portfolio-subtitle">
+
+
+
+</p>
+
+<div class="portfolio-grid">
+
+<!-- =========================
+     PROYECTO HOTEL
+========================= -->
+
+<a class="project"
+href="PROYECTOS/iglesia.html">
+
+<img src="IMAGENES/iglesia-01.jpg">
+
+<div class="project-info">
+
+<div class="project-name">
+Andamios
+</div>
+
+<div class="project-type">
+Proyecto de Remodelación
+</div>
+
+</div>
+
+</a>
+
+<!-- =========================
+     PROYECTO 2
+========================= -->
+
+<a class="project"
+href="PROYECTOS/litibupuente.html">
+
+<img src="IMAGENES/litibu-01.jpg">
+
+<div class="project-info">
+
+<div class="project-name">
+Puente colgante
+</div>
+
+<div class="project-type">
+ Proyecto para Construcción 
+</div>
+
+</div>
+
+</a>
+
+<!-- =========================
+     PROYECTO 3
+========================= -->
+
+<a class="project"
+href="PROYECTOS/habitat.html">
+
+<img src="IMAGENES/habitat-01.jpg">
+
+<div class="project-info">
+
+<div class="project-name">
+Escalera Multidireccional
+</div>
+
+<div class="project-type">
+Proyecto Residencial
+</div>
+
+</div>
+
+</a>
+
+<!-- =========================
+     PROYECTO 4
+========================= -->
+
+<a class="project"
+href="PROYECTOS/bucerias.html">
+
+<img src="IMAGENES/bucerias-01.jpg">
+
+<div class="project-info">
+
+<div class="project-name">
+Escaleras
+</div>
+
+<div class="project-type">
+Proyecto de Construcción
+</div>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- =========================
+     LLAMADA A LA ACCIÓN
+========================= -->
+
+<div class="cta">
+
+<h2>
+CONTACTAR CIMBRA NIETO
+</h2>
+
+<p>
+
+Hablemos sobre cómo podemos
+crear sinergia 
+para tu empresa.
+
+</p>
+
+<a class="btn"
+href="https://wa.me/5213221475314"
+target="_blank">
+
+WhatsApp 
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     PIE DE PÁGINA
+========================= -->
+
+<div class="footer">
+
+© 2026 Spot Comunicación Audiovisual
+
+</div>
+
+</div>
+
+</body>
+
+</html>
