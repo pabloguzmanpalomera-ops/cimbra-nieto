@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -9,6 +8,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Cimbra Nieto</title>
+
+<!-- =========================
+     CONFIGURACIÓN PWA
+========================= -->
+
+<meta name="theme-color" content="#333333">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="apple-touch-icon" href="ICONOS/apple-touch-icon.png">
+
+<link rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ICONOS/favicon-32.png">
 
 <style>
 
@@ -49,7 +63,7 @@ box-shadow:0 10px 30px rgba(0,0,0,.15);
 
 .cover{
 height:140px;
-background:black;
+background:#333333;
 }
 
 /* =========================
@@ -59,14 +73,14 @@ background:black;
 .profile{
 display:flex;
 justify-content:center;
-margin-top:-55px;
+margin-top:-95px;
 }
 
 .profile img{
-width:250px;
-height:250px;
-border-radius:50%;
-border:10px solid white;
+width:150px;
+height:150px;
+border-radius:55%;
+border:3px solid white;
 object-fit:cover;
 background:#ddd;
 }
@@ -149,9 +163,8 @@ text-align:center;
 font-size:20px;
 letter-spacing:1px;
 margin-bottom:18px;
-
-background:#e9ecef; 
-padding:12px 10px; 
+background:#e9ecef;
+padding:12px 10px;
 border-radius:8px;
 }
 
@@ -163,7 +176,9 @@ margin-bottom:20px;
 line-height:1.5;
 }
 
-/* GRID DE PROYECTOS */
+/* =========================
+   GRID DE PROYECTOS
+========================= */
 
 .portfolio-grid{
 display:grid;
@@ -171,7 +186,9 @@ grid-template-columns:1fr 1fr;
 gap:12px;
 }
 
-/* TARJETA DE PROYECTO */
+/* =========================
+   TARJETA DE PROYECTO
+========================= */
 
 .project{
 position:relative;
@@ -184,7 +201,9 @@ background:#ddd;
 box-shadow:0 5px 15px rgba(0,0,0,.12);
 }
 
-/* IMAGEN DEL PROYECTO */
+/* =========================
+   IMAGEN
+========================= */
 
 .project img{
 width:100%;
@@ -194,13 +213,13 @@ display:block;
 transition:transform .4s ease;
 }
 
-/* EFECTO AL PASAR EL MOUSE */
-
 .project:hover img{
 transform:scale(1.06);
 }
 
-/* DEGRADADO */
+/* =========================
+   DEGRADADO
+========================= */
 
 .project::after{
 content:"";
@@ -215,7 +234,9 @@ rgba(0,0,0,.85)
 );
 }
 
-/* TEXTO DEL PROYECTO */
+/* =========================
+   TEXTO
+========================= */
 
 .project-info{
 position:absolute;
@@ -292,15 +313,18 @@ text-align:center;
 
 <div class="cover"></div>
 
+
 <!-- =========================
      FOTO DE PERFIL
 ========================= -->
 
 <div class="profile">
 
-<img src="foto.jpg">
+<img src="foto.jpg"
+     alt="Cimbra Nieto">
 
 </div>
+
 
 <!-- =========================
      CONTENIDO PRINCIPAL
@@ -314,11 +338,9 @@ CIMBRA NIETO
 
 <p class="subtitle">
 
-Andamios-Puntales-Duelas-Escaleras-Hamacas<br>
+Andamios-Puntales-Duelas-Escaleras-Hamacas
 
-<br>
-
-
+<br><br>
 
 </p>
 
@@ -330,39 +352,47 @@ Andamios-Puntales-Duelas-Escaleras-Hamacas<br>
 <div class="portfolio">
 
 <h2 class="portfolio-title">
-PROYECTOS & SERVICIOS
+
+PROYECTOS &amp; SERVICIOS
+
 </h2>
 
 <p class="portfolio-subtitle">
 
-
-
 </p>
+
 
 <div class="portfolio-grid">
 
+
 <!-- =========================
-     PROYECTO HOTEL
+     PROYECTO 1
 ========================= -->
 
 <a class="project"
 href="PROYECTOS/iglesia.html">
 
-<img src="IMAGENES/iglesia-01.jpg">
+<img src="IMAGENES/iglesia-01.jpg"
+     alt="Andamios">
 
 <div class="project-info">
 
 <div class="project-name">
+
 Andamios
+
 </div>
 
 <div class="project-type">
+
 Proyecto de Remodelación
+
 </div>
 
 </div>
 
 </a>
+
 
 <!-- =========================
      PROYECTO 2
@@ -371,21 +401,27 @@ Proyecto de Remodelación
 <a class="project"
 href="PROYECTOS/litibupuente.html">
 
-<img src="IMAGENES/litibu-01.jpg">
+<img src="IMAGENES/litibu-01.jpg"
+     alt="Puente colgante">
 
 <div class="project-info">
 
 <div class="project-name">
+
 Puente colgante
+
 </div>
 
 <div class="project-type">
- Proyecto para Construcción 
+
+Proyecto para Construcción
+
 </div>
 
 </div>
 
 </a>
+
 
 <!-- =========================
      PROYECTO 3
@@ -394,21 +430,27 @@ Puente colgante
 <a class="project"
 href="PROYECTOS/habitat.html">
 
-<img src="IMAGENES/habitat-01.jpg">
+<img src="IMAGENES/habitat-01.jpg"
+     alt="Escalera Multidireccional">
 
 <div class="project-info">
 
 <div class="project-name">
+
 Escalera Multidireccional
+
 </div>
 
 <div class="project-type">
+
 Proyecto Residencial
+
 </div>
 
 </div>
 
 </a>
+
 
 <!-- =========================
      PROYECTO 4
@@ -417,16 +459,21 @@ Proyecto Residencial
 <a class="project"
 href="PROYECTOS/bucerias.html">
 
-<img src="IMAGENES/bucerias-01.jpg">
+<img src="IMAGENES/bucerias-01.jpg"
+     alt="Escaleras">
 
 <div class="project-info">
 
 <div class="project-name">
+
 Escaleras
+
 </div>
 
 <div class="project-type">
+
 Proyecto de Construcción
+
 </div>
 
 </div>
@@ -437,6 +484,7 @@ Proyecto de Construcción
 
 </div>
 
+
 <!-- =========================
      LLAMADA A LA ACCIÓN
 ========================= -->
@@ -444,22 +492,25 @@ Proyecto de Construcción
 <div class="cta">
 
 <h2>
+
 CONTACTAR CIMBRA NIETO
+
 </h2>
 
 <p>
 
-Hablemos sobre cómo podemos
-crear sinergia 
+Hablemos sobre cómo podemos<br>
+crear sinergia<br>
 para tu empresa.
 
 </p>
 
 <a class="btn"
 href="https://wa.me/5213221475314"
-target="_blank">
+target="_blank"
+rel="noopener">
 
-WhatsApp 
+WhatsApp
 
 </a>
 
@@ -479,6 +530,40 @@ WhatsApp
 </div>
 
 </div>
+
+
+<!-- =========================
+     SERVICE WORKER PWA
+========================= -->
+
+<script>
+
+if ("serviceWorker" in navigator) {
+
+window.addEventListener("load", () => {
+
+navigator.serviceWorker.register("./sw.js")
+
+.then(() => {
+
+console.log("Cimbra Nieto PWA activa");
+
+})
+
+.catch((error) => {
+
+console.error(
+"Error al activar la PWA:",
+error
+);
+
+});
+
+});
+
+}
+
+</script>
 
 </body>
 
